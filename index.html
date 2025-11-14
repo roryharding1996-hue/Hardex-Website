@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Hardex Ltd</title>
+<style>
+body { margin:0; font-family:Arial; background:#fff; }
+header { text-align:center; padding:20px; border-bottom:2px solid #e0e0e0; }
+#container { display:flex; height:calc(100vh - 120px); }
+#sidebar { width:220px; border-right:2px solid #e0e0e0; padding-top:20px; }
+#sidebar a { display:block; padding:12px; text-align:center; text-decoration:none; color:#216e1f; font-weight:bold; border-bottom:1px solid #e0e0e0; }
+#sidebar a:hover { background:#e8f5e7; }
+#content { flex-grow:1; padding:30px; }
+</style>
+<script>
+function load(section){
+ document.getElementById('content').innerHTML = section;
+}
+let home = "<h2>Home</h2><p>Welcome to Hardex.</p>";
+let admin = "<h2>Admin</h2><p>Admin services.</p>";
+let commercial = "<h2>Commercial</h2><p>Commercial outsourcing.</p>";
+let payroll = "<h2>Payroll</h2><p>Payroll services.</p>";
+let finance = "<h2>Finance & Accounting</h2><p>Finance solutions.</p>";
+let safety = "<h2>Safety</h2><p>Safety services.</p>";
+let about = "<h2>About Us</h2><p>About Hardex.</p>";
+let contact = "<h2>Contact</h2><p>Contact us.</p>";
+let login = "<h2>Login</h2><p>Coming soon.</p>";
+</script>
+</head>
+<body>
+<header><h1>Hardex Ltd</h1></header>
+<div id="container">
+<div id="sidebar">
+<a href="#" onclick="load(home)">Home</a>
+<a href="#" onclick="load(admin)">Admin</a>
+<a href="#" onclick="load(commercial)">Commercial</a>
+<a href="#" onclick="load(payroll)">Payroll</a>
+<a href="#" onclick="load(finance)">Finance & Accounting</a>
+<a href="#" onclick="load(safety)">Safety</a>
+<a href="#" onclick="load(about)">About Us</a>
+<a href="#" onclick="load(contact)">Contact</a>
+<a href="#" onclick="load(login)">Login</a>
+</div>
+<div id="content"><h2>Welcome to Hardex</h2><p>Select a section.</p></div>
+</div>
+</body>
+</html>
